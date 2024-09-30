@@ -1,0 +1,304 @@
+<div th:fragment="header">
+    <div style="background-color: #feefd0" class="header fixed-top d-none d-lg-block">
+        <div class="container header-container">
+            <div class="topbar-top">
+                <div class="topbar-top_left">
+                    <div class="logo">
+                        <a class="logo-img" href="#">
+                            <img th:src="@{/images/logo.svg}" alt="" />
+                        </a>
+                    </div>
+                    <div class="theme-search">
+                        <div class="header-search">
+                            <form action="search" id="header-search-product" class="form-header_search">
+                                <input class="input-search" type="text" placeholder="Tìm kiếm" />
+                                <button type="submit" class="btn-search">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="topbar-top_right">
+                    <div class="list-contact">
+                        <a href="#" class="map">
+                            <i class="fa-solid fa-location-dot map-icon"></i>
+                            Tìm
+                            <span class="number">247</span>
+                            cửa hàng
+                        </a>
+                        <a href="" class="tell-phone">
+                            <i class="fa-solid fa-phone phone-icon"></i>
+                            <span style="color: #37176f">98432567</span>
+                        </a>
+                        <span class="free">FREE</span>
+                        <span style="margin: 0 8px">-</span>
+                        <span style="color: #37176f">Đặt hàng gọi</span>
+                        <a href="#" class="tell-phone">
+                            <i class="fa-solid fa-phone phone-icon"></i>
+                            <span style="color: #37176f">0987456123</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="topbar-bottom">
+                <div class="topbar-bottom_left">
+                    <div class="header-nav">
+                        <ul class="item-big">
+                            <li class="nav-iteam">
+                                <a href="" class="a-img hover-color yellow">YODY YÊU</a>
+                            </li>
+                            <li class="nav-iteam">
+                                <a href="" class="a-img hover-color red">COUPON XỊN</a>
+                            </li>
+                            <li class="nav-iteam">
+                                <a href="" class="a-img hover-color">NAM</a>
+                                <ul class="small-item">
+                                    <li>
+                                        <a href="">Quần Nam</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Áo Nam</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Phụ Kiện Nam</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-iteam">
+                                <a href="" class="a-img hover-color">NỮ</a>
+                                <ul class="small-item">
+                                    <li>
+                                        <a href="">Quần Nữ</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Áo Nữ</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Phụ Kiện Nữ</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-iteam">
+                                <a href="" class="a-img hover-color">TRẺ EM</a>
+                                <ul class="small-item">
+                                    <li>
+                                        <a href="">Quần Trẻ Em</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Áo Trẻ Em</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Phụ Kiện Trẻ Em</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-iteam">
+                                <a href="" class="a-img hover-color">ĐỒNG PHỤC</a>
+                                <ul class="small-item">
+                                    <li>
+                                        <a href="">NAM</a>
+                                    </li>
+                                    <li>
+                                        <a href="">NỮ</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-iteam">
+                                <a href="" class="a-img hover-color">BỘ SƯU TẬP</a>
+                                <ul class="small-item">
+                                    <li>
+                                        <a href="">YOGUU</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Clean Việt Nam</a>
+                                    </li>
+                                    <li>
+                                        <a href="">YODY Sport</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-iteam">
+                                <a href="" class="a-img hover-color">BLOG</a>
+                                <ul class="small-item">
+                                    <li>
+                                        <a href="">Em Đẹp</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Chàng Bảnh Bao</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Bé Khỏe Đẹp</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="topbar-bottom_right">
+                    <div class="cart-drop">
+                        <a href="#" class="cart-wrap">
+                            <i class="fa-solid fa-bag-shopping icon-cart hover-color"></i>
+                            <span class="count_item">0</span>
+                            <span class="cart hover-color">GIỎ HÀNG</span>
+                        </a>
+                        <div class="cart-content">
+                            <img class="shopping-icon" th:src="@{/images/blank_cart.svg}" alt="" />
+                            <p>Giỏ hàng của bạn trống</p>
+                            <div class="cart-content_rl">
+                                <a href="#" class="hover-color">Đăng ký/</a>
+                                <a href="#" class="hover-color">Đăng nhập</a>
+                            </div>
+                            <a href="#" class="hover-color">Mua ngay</a>
+                        </div>
+                    </div>
+                    <div class="header-login">
+                        <div class="user">
+                            <div class="user-login">
+                                <i class="fa-solid fa-user icon-login"></i>
+                                <a class="register hover-color" href="#" id="show-register-form">ĐĂNG KÝ</a>
+                                <span style="padding: 0 3px">/</span>
+                                <a class="login hover-color" href="#" id="show-login-form">ĐĂNG NHẬP</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-mobile fixed-top">
+        <div class="container header-mobile-container">
+            <div class="menu-button-and-user">
+                <button class="menu-button" id="menu-button">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <button class="mini-user-button"><i class="fa-solid fa-user icon-login"
+                                                    style="transform: scale(1.4);"></i></button>
+            </div>
+            <div class="mobile-logo">
+                <a href="">
+                    <img th:src="@{/images/logo.svg}" alt="">
+                </a>
+            </div>
+            <div class="search-and-cart">
+                <div class="mini-search-button-div mini-button">
+
+                    <button type="menu" class="mini-btn-search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+                <div class="mini-cart mini-button">
+                    <button class="mini-cart-button">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+        <div class="container menu-list" id="menu-list">
+            <div class="header-nav">
+                <ul class="item-big">
+                    <li class="nav-iteam">
+                        <a href="" class="a-img hover-color yellow">YODY YÊU</a>
+                    </li>
+                    <li class="nav-iteam">
+                        <a href="" class="a-img hover-color red">COUPON XỊN</a>
+                    </li>
+                    <li class="nav-iteam">
+                        <a href="" class="a-img hover-color">NAM</a>
+                        <ul class="small-item">
+                            <li>
+                                <a href="">Quần Nam</a>
+                            </li>
+                            <li>
+                                <a href="">Áo Nam</a>
+                            </li>
+                            <li>
+                                <a href="">Phụ Kiện Nam</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-iteam">
+                        <a href="" class="a-img hover-color">NỮ</a>
+                        <ul class="small-item">
+                            <li>
+                                <a href="">Quần Nữ</a>
+                            </li>
+                            <li>
+                                <a href="">Áo Nữ</a>
+                            </li>
+                            <li>
+                                <a href="">Phụ Kiện Nữ</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-iteam">
+                        <a href="" class="a-img hover-color">TRẺ EM</a>
+                        <ul class="small-item">
+                            <li>
+                                <a href="">Quần Trẻ Em</a>
+                            </li>
+                            <li>
+                                <a href="">Áo Trẻ Em</a>
+                            </li>
+                            <li>
+                                <a href="">Phụ Kiện Trẻ Em</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-iteam">
+                        <a href="" class="a-img hover-color">ĐỒNG PHỤC</a>
+                        <ul class="small-item">
+                            <li>
+                                <a href="">NAM</a>
+                            </li>
+                            <li>
+                                <a href="">NỮ</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-iteam">
+                        <a href="" class="a-img hover-color">BỘ SƯU TẬP</a>
+                        <ul class="small-item">
+                            <li>
+                                <a href="">YOGUU</a>
+                            </li>
+                            <li>
+                                <a href="">Clean Việt Nam</a>
+                            </li>
+                            <li>
+                                <a href="">YODY Sport</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-iteam">
+                        <a href="" class="a-img hover-color">BLOG</a>
+                        <ul class="small-item">
+                            <li>
+                                <a href="">Em Đẹp</a>
+                            </li>
+                            <li>
+                                <a href="">Chàng Bảnh Bao</a>
+                            </li>
+                            <li>
+                                <a href="">Bé Khỏe Đẹp</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="item-big-mobile-anh">
+                    <div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
