@@ -70,7 +70,6 @@ body {
     box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2);
     background: linear-gradient(to bottom, #feecc7, #fff);
     padding-top: 10px;
-
 }
 
 .header-mobile {
@@ -80,18 +79,16 @@ body {
     display: none;
 }
 
-
-
-
-
 .header-mobile-container {
     height: 100%;
     display: flex;
     align-items: center;
-
-
 }
 
+
+.container-fluid {
+    padding-top: 110px;
+}
 
 
 .menu-button-and-user {
@@ -304,7 +301,7 @@ body {
     margin-top: 10px;
     padding-top: 18px !important;
 }
-.nav-iteam {
+.nav-item {
     font-family: SVN-Gilroy;
     margin-right: 30px;
     white-space: nowrap;
@@ -322,7 +319,7 @@ body {
     border: none;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
-.nav-iteam:hover .small-item {
+.nav-item:hover .small-item {
     display: block;
 }
 .small-item li a {
@@ -332,7 +329,7 @@ body {
 .small-item li a:hover {
     color: #fcaf17 !important;
 }
-.nav-iteam:hover .small-item li a {
+.nav-item:hover .small-item li a {
     color: #333;
 }
 .small-item li {
@@ -720,7 +717,7 @@ body {
 
 
 @media (max-width: 1200px) {
-    .nav-iteam {
+    .nav-item {
         margin-right: 20px;
     }
     .cart-content {
@@ -821,12 +818,12 @@ body {
         text-align: start;
     }
 
-    .nav-iteam:hover .small-item {
+    .nav-item:hover .small-item {
         display: none;
     }
 
 
-    .nav-iteam {
+    .nav-item {
 
     }
 
