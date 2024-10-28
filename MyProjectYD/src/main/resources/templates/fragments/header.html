@@ -1,4 +1,4 @@
-<div th:fragment="header">
+<div th:fragment="header" xmlns:sec="http://www.w3.org/1999/xhtml">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div style="background-color: #feefd0" class="header fixed-top d-none d-lg-block">
             <div class="container header-container">
@@ -138,7 +138,23 @@
                                 </li>
 
                                 <li class="nav-item">
+                                    <a class="nav-link a-img hover-color" th:href="@{/products}">PRODUCT</a>
+                                </li>
+
+                                <li class="nav-item" sec:authorize="hasAnyAuthority('Admin', 'Editor')">
                                     <a class="nav-link a-img hover-color" th:href="@{/users}">USER</a>
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-user icon-dark fa-2x"></i>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+                                       th:text="${#authentication.principal.fullName}">
+                                    </a>
+                                    <div class="dropdown-menu cursor-pointer">
+                                        <a th:href="@{/logout}" class="dropdown-item">Logout</a>
+                                    </div>
                                 </li>
                             </ul>
                         </div>

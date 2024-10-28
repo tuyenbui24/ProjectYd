@@ -1,6 +1,5 @@
-package shopYd.com.MyProjectYD.user;
+package shopYd.com.MyProjectYD.user.service;
 
-import jakarta.persistence.Id;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -10,9 +9,11 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import shopYd.com.MyProjectYD.entity.Role;
 import shopYd.com.MyProjectYD.entity.User;
+import shopYd.com.MyProjectYD.user.exc.UserNotFoundExp;
+import shopYd.com.MyProjectYD.user.repo.RoleRepository;
+import shopYd.com.MyProjectYD.user.repo.UserRepository;
 
 import java.util.List;
-import java.util.NoSuchElementException;
 
 @Service
 public class UserService {

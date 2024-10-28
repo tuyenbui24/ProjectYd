@@ -4,20 +4,20 @@
 <body>
 <div id="main" class="main">
     <!-- đăng nhập -->
-    <form action="" method="POST" class="form form-login" id="form-2">
+    <form th:action="@{/login}" method="POST" class="form form-login" id="form-2">
         <h3 class="heading">Đăng nhập</h3>
         <div class="spacer"></div>
         <div class="form-group">
             <label class="form-label">Email</label>
-            <input type="text" placeholder="Nhập eamil" class="form-control" />
+            <input type="email" name="email" placeholder="Nhập email" class="form-control" />
             <span class="form-message"></span>
         </div>
         <div class="form-group">
             <label class="form-label">Mật khẩu</label>
-            <input type="password" placeholder="Nhập mật khẩu" class="form-control" />
+            <input type="password" name="password" placeholder="Nhập mật khẩu" class="form-control" />
             <span class="form-message"></span>
         </div>
-        <button class="form-submit">Đăng nhập</button>
+        <button type="submit" value="Login" class="form-submit">Đăng nhập</button>
         <h5 style="margin: 20px 0">Hoặc đăng nhập bằng</h5>
         <a href="">
             <img style="border-radius: 10px; border: 1px solid #feefd0" th:src="@{/images/ic_btn_google.svg}" alt="" />

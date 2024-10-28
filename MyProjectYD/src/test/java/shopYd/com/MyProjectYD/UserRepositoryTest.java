@@ -8,7 +8,7 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.test.annotation.Rollback;
 import shopYd.com.MyProjectYD.entity.Role;
 import shopYd.com.MyProjectYD.entity.User;
-import shopYd.com.MyProjectYD.user.UserRepository;
+import shopYd.com.MyProjectYD.user.repo.UserRepository;
 
 import java.util.List;
 

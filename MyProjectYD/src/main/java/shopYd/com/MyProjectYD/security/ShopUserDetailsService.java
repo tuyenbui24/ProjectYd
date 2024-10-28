@@ -6,7 +6,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import shopYd.com.MyProjectYD.entity.User;
-import shopYd.com.MyProjectYD.user.UserRepository;
+import shopYd.com.MyProjectYD.user.repo.UserRepository;
 
 @Service
 public class ShopUserDetailsService implements UserDetailsService {

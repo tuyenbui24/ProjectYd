@@ -1,4 +1,4 @@
-package shopYd.com.MyProjectYD.user;
+package shopYd.com.MyProjectYD.user.repo;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

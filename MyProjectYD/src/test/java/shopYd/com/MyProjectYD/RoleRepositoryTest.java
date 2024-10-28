@@ -4,10 +4,9 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
-import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.test.annotation.Rollback;
 import shopYd.com.MyProjectYD.entity.Role;
-import shopYd.com.MyProjectYD.user.RoleRepository;
+import shopYd.com.MyProjectYD.user.repo.RoleRepository;
 
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
