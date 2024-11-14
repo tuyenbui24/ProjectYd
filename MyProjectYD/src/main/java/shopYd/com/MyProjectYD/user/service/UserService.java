@@ -37,7 +37,6 @@ public class UserService {
     }
 
     public static final int users_in_page = 4;
-
     public Page<User> listByPage(int pageNum, String keyword) {
         Pageable pageable = PageRequest.of(pageNum - 1, users_in_page);
 
@@ -79,10 +78,10 @@ public class UserService {
                 .orElseThrow(() -> new UserNotFoundExp("Could not find any user with id: " + id));
     }
 
-    public void delete(Integer id) {
+    public void delete(Integer id) throws UserNotFoundExp {
         User user = userRepo.findById(id)
                 .orElseThrow(() -> new UserNotFoundExp("Could not find any user with ID " + id));
-        userRepo.delete(user    );
+        userRepo.delete(user);
     }
 
     public void updateStatus(Integer id, boolean enabled) {
@@ -93,14 +92,6 @@ public class UserService {
         User userByEmail = userRepo.getUserByEmail(email);
 
         if (userByEmail == null) return true;
-
-        boolean isCreatingNew = (id == null);
-
-        if (isCreatingNew) {
-            if (userByEmail != null) return false;
-        } else {
-            if (userByEmail.getId() != id) return false;
-        }
-        return userByEmail.getId().equals(id);
+        return userByEmail.getId().equals(id) || id == null;
     }
 }

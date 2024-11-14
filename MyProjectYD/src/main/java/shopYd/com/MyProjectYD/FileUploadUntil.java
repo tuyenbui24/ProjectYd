@@ -43,6 +43,7 @@ public class FileUploadUntil {
                     }
                 }
             });
+
         } catch (IOException ex) {
             LOGGER.error("Could not list directory: " + dirPath);
         }

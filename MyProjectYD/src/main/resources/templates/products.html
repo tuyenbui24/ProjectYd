@@ -16,7 +16,7 @@
         <h1>Manage Profuct</h1>
         <a class="m-lg-5" th:href="@{/products/new}"><i class="fa-solid fa-plus fa-2x"></i></a>
         &nbsp;
-        <a th:href="@{/export/csv}"><i class="fa-solid fa-file-csv fa-2x"></i></a>
+        <a th:href="@{/export/product/csv}"><i class="fa-solid fa-file-csv fa-2x"></i></a>
     </div>
 
     <div th:if="${message != null}" class="alert alert-success text-center">
@@ -43,18 +43,20 @@
                 <th>Type</th>
                 <th>Price</th>
                 <th>Quantity</th>
+                <th>Enabled</th>
                 <th>Actions</th>
             </tr>
             </thead>
+
             <tbody>
             <tr th:each="product : ${listProduct}">
                 <td>[[${product.id}]]</td>
-                <td>[[${product.name}]]</td>
                 <td>
                     <i th:if="${product.image == null}" class="fa-solid fa-image-portrait fa-3x icon-dark"></i>
-                    <img th:if="${product.image != null}" th:src="@{${product.photosImagePath}}" style="width:100px">
+                    <img th:if="${product.image != null}" th:src="@{${product.productImagePath}}" style="width:100px">
                 </td>
-                <td>[[${product.category}]]</td>
+                <td>[[${product.name}]]</td>
+                <td>[[${product.category.name}]]</td>
                 <td>[[${product.price}]]</td>
                 <td>[[${product.quantity}]]</td>
                 <td>
@@ -84,7 +86,7 @@
 <script th:src="@{/fontawesome/js/all.min.js}"></script>
 <script th:src="@{/js/main.js}">
     function clearFilter() {
-        window.location = '[[@{/products}]]';
+        window.location = '/products';
     }
 </script>
 </body>

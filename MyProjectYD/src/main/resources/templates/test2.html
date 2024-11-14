@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head :: head"></head>
+<body>
+<div class="container-fluid">
+        <div>
+            <div th:replace="fragments/header :: header"></div>
+        </div>
+        <div th:each="product : ${listProduct}" style="margin-top:100px ">
+            <h1>start</h1>
+            <h1>[[${product.id}]]</h1>
+            <h1>[[${product.name}]]</h1>
+            <h1>[[${product.category}]]</h1>
+            <h1>[[${product.price}]]</h1>
+            <h1>[[${product.quantity}]]</h1>
+            <h1>end</h1>
+        </div>
+    <h1>test</h1>
+</div>
+</body>
+</html>

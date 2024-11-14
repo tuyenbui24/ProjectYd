@@ -16,8 +16,8 @@ public class MainController {
         return "login";
     }
 
-    @GetMapping("/error")
-    public String errorPage() {
-        return "error";
-    }
+//    @GetMapping("/error")
+//    public String errorPage() {
+//        return "error";
+//    }
 }

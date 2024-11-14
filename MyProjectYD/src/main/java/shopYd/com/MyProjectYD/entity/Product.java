@@ -46,4 +46,11 @@ public class Product {
         }
         this.category = category;
     }
+
+    @Transient
+    public String getProductImagePath() {
+        if (id == null || image == null) return "/images/default-product.png";
+
+        return "/product-image/" + this.id + "/" + this.image;
+    }
 }

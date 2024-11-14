@@ -16,7 +16,7 @@
         <h1>Manage User</h1>
         <a class="m-lg-5" th:href="@{/users/new}"><i class="fa-solid fa-plus fa-2x"></i></a>
         &nbsp;
-        <a th:href="@{/export/csv}"><i class="fa-solid fa-file-csv fa-2x"></i></a>
+        <a th:href="@{/export/users/csv}"><i class="fa-solid fa-file-csv fa-2x"></i></a>
     </div>
 
     <div th:if="${message != null}" class="alert alert-success text-center">
@@ -115,7 +115,7 @@
 <script th:src="@{/fontawesome/js/all.min.js}"></script>
 <script th:src="@{/js/main.js}">
     function clearFilter() {
-        window.location = '[[@{/users}]]';
+        window.location = '/users';
     }
 </script>
 </body>

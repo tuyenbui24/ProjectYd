@@ -130,9 +130,9 @@ public class UserController {
         return "redirect:/users";
     }
 
-    @GetMapping("/export/csv")
+    @GetMapping("/export/users/csv")
     public void exportCSV(HttpServletResponse response) throws IOException {
-            List<User> listUsers = userService.findAllUser();
+        List<User> listUsers = userService.findAllUser();
         UserExportCsv exporter = new UserExportCsv();
         exporter.export(listUsers, response);
     }
